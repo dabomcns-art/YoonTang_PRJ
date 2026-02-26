@@ -1,14 +1,70 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제올라이트: 놀라운 미네랄</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1>제올라이트: 자연의 놀라운 필터</h1>
+    </header>
+
+    <main>
+        <section id="intro">
+            <h2>제올라이트란 무엇일까요?</h2>
+            <p>제올라이트는 미세한 구멍을 가진 다공성 물질로, '끓는 돌'이라는 의미의 그리스어에서 유래했습니다. 천연 또는 인공적으로 만들어지며, 독특한 구조 덕분에 다양한 분야에서 활발하게 사용됩니다.</p>
+        </section>
+
+        <section id="structure">
+            <h2>제올라이트의 구조</h2>
+            <p>제올라이트는 알루미늄, 규소, 산소 원자가 3차원적으로 연결된 골격 구조를 가집니다. 이 구조는 분자 크기의 작은 구멍과 채널을 형성하여, 특정 분자만을 선택적으로 흡착하거나 통과시키는 '분자 체' 역할을 합니다.</p>
+            <div id="zeolite-3d-viewer">
+                <!-- 3D 모델 뷰어가 여기에 들어갑니다. -->
+            </div>
+        </section>
+
+        <section id="applications">
+            <h2>제올라이트의 활용</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="water">수질 정화</button>
+                <button class="tab-btn" data-tab="detergent">세제</button>
+                <button class="tab-btn" data-tab="air">공기 정화</button>
+                <button class="tab-btn" data-tab="agri">농업</button>
+                <button class="tab-btn" data-tab="medical">의료</button>
+            </div>
+            <div class="tab-content active" id="water">
+                <p><strong>수질 정화:</strong> 물 속의 중금속 및 유해 물질을 흡착하여 물을 깨끗하게 정화합니다. 다공성 구조를 통해 미세한 오염 물질을 걸러내는 천연 필터 역할을 수행합니다.</p>
+            </div>
+            <div class="tab-content" id="detergent">
+                <p><strong>세제:</strong> 경수를 연화시켜 세척력을 향상시키는 역할을 합니다. 칼슘과 마그네슘 이온을 포획하여 비누의 세정력을 높여줍니다.</p>
+            </div>
+            <div class="tab-content" id="air">
+                <p><strong>공기 정화:</strong> 공기 중의 유해 가스나 냄새를 제거하는 데 사용됩니다. 휘발성 유기 화합물(VOC)을 효과적으로 흡착하여 쾌적한 실내 환경을 유지합니다.</p>
+            </div>
+            <div class="tab-content" id="agri">
+                <p><strong>농업:</strong> 토양의 수분을 유지하고 양분을 천천히 방출하여 식물 성장을 돕습니다. 비료의 효율성을 높이고 토양 질을 개선하는 완효성 비료 역할을 합니다.</p>
+            </div>
+            <div class="tab-content" id="medical">
+                <p><strong>의료:</strong> 약물 전달 시스템이나 상처 치료제 등 의료 분야에서도 연구되고 있습니다. 생체 적합성이 뛰어나며 정밀한 약물 방출 조절이 가능합니다.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 제올라이트 소개 사이트. All rights reserved.</p>
+    </footer>
+
+    <!-- Three.js CDN -->
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+          }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
