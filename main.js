@@ -1,6 +1,31 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+// --- Theme Toggle Logic ---
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.documentElement;
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+    body.setAttribute('data-theme', currentTheme);
+    if (currentTheme === 'dark') {
+        themeToggle.textContent = '☀️ 라이트 모드';
+    }
+}
+
+themeToggle.addEventListener('click', () => {
+    let theme = body.getAttribute('data-theme');
+    if (theme === 'dark') {
+        body.removeAttribute('data-theme');
+        themeToggle.textContent = '🌙 다크 모드';
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '☀️ 라이트 모드';
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
 // --- Tab Logic ---
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContents = document.querySelectorAll('.tab-content');
